@@ -10,7 +10,7 @@ export default defineConfig({
   lang: 'en-US', //
   title: 'IPleased',
   description: 'Just playing around.',
-  base: '/',
+  base: '/i-pleased/',
   markdown: {
     theme: 'material-palenight',
     lineNumbers: true
