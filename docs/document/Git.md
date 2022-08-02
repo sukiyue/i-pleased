@@ -62,8 +62,6 @@
 
 查看配置 git config -l
 
-<img src="Git.assets/image-20220118224524015-16425176018031.png" alt="image-20220118224524015" style="zoom:80%; float:left" />
-
 查看不同级别的配置文件:
 
 ```bash
