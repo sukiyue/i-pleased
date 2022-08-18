@@ -3,7 +3,7 @@ layout: home
 hero:
   name: I-Pleased
   text: Dream wake up or Full into the moon.
-  # tagline: Lorem ipsum...
+  # tagline: Dream wake up or Full into the moon.
   actions:
     - theme: brand
       text: Get Started

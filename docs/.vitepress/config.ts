@@ -7,6 +7,7 @@ import sidebar from './sidebar'
 
 export default defineConfig({
    // These are app level configs.
+  // logo: './public/pleasure.svg',
   lang: 'en-US', //
   title: 'IPleased',
   description: 'Just playing around.',
@@ -15,6 +16,7 @@ export default defineConfig({
     theme: 'material-palenight',
     lineNumbers: true
   },
+  lastUpdated: true,
 
    // Theme related configurations.
   themeConfig: {
@@ -38,7 +40,6 @@ export default defineConfig({
     docFooter: {
       prev: 'Pagina prior',
       next: 'Proxima pagina'
-    },
+    }
   },
- 
 })
