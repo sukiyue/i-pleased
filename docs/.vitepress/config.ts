@@ -7,7 +7,6 @@ import sidebar from './sidebar'
 
 export default defineConfig({
    // These are app level configs.
-  // logo: './public/pleasure.svg',
   lang: 'en-US', //
   title: 'IPleased',
   description: 'Just playing around.',
@@ -20,7 +19,7 @@ export default defineConfig({
 
    // Theme related configurations.
   themeConfig: {
-    // logo: '/logo.svg',   
+    logo: '/logo.svg',   
     // siteTitle: 'Hello World', 
     // algolia: {
     //   apiKey: 'your_api_key',

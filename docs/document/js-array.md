@@ -1,28 +1,26 @@
-# JavaScript数组操作
+# JavaScript 数组常用方法
 
-## Array对象
+## Array 对象
 
-Array对象用于在单个变量中存储多个值：
+Array 对象用于在单个变量中存储多个值：
 
 ```javascript
-const cars = ["Tesla","Volvo","BMW"];
+const cars = ['Tesla', 'Volvo', 'BMW']
 ```
 
-
-
-## Array属性
+## Array 属性
 
 ### constructor
 
 **定义和用法**
 
-在JavaScript中，constructor属性返回对象的构造函数。
+在 JavaScript 中，constructor 属性返回对象的构造函数。
 
 **实例**
 
 ```javascript
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.constructor;
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.constructor
 // 返回 function Array() { [native code] }
 ```
 
@@ -44,8 +42,8 @@ array.length = number;
 返回数组中元素的数量
 
 ```javascript
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.length;
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.length
 // 4
 ```
 
@@ -53,9 +51,9 @@ fruits.length;
 
 **定义和用法**
 
-- prototype是可用于所有JavaScript对象的全局构造函数。
-- prototype引用全局Array()对象。
-- prototype构造函数允许向数组添加新的属性和方法。
+- prototype 是可用于所有 JavaScript 对象的全局构造函数。
+- prototype 引用全局 Array()对象。
+- prototype 构造函数允许向数组添加新的属性和方法。
 - 当构造新属性时，所有数组都将获得此属性及其值。当构造新方法时，所有数组都将获得此方法。
 
 **实例**
@@ -63,9 +61,9 @@ fruits.length;
 创建一个新的数组方法，将数组值转换为大写：
 
 ```javascript
-Array.prototype.myUpperCase = function(){
-  for(i = 0; i< this.length; i++){
-    this[i] = this[i].toUpperCase();
+Array.prototype.myUpperCase = function () {
+  for (i = 0; i < this.length; i++) {
+    this[i] = this[i].toUpperCase()
   }
 }
 ```
@@ -73,14 +71,12 @@ Array.prototype.myUpperCase = function(){
 创建一个数组，然后调用这个方法：
 
 ```javascript
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.myUpperCase();
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.myUpperCase()
 // BANANA,ORANGE,APPLE,MANGO
 ```
 
-
-
-## Array方法
+## Array 方法
 
 ### push()
 
@@ -88,7 +84,7 @@ fruits.myUpperCase();
 
 push() 方法向数组末尾添加新项，并返回新的长度。
 
-注释：push() 方法会改变数组的长度。如需在数据的头部添加新项，请使用unshift() 方法。 
+注释：push() 方法会改变数组的长度。如需在数据的头部添加新项，请使用 unshift() 方法。
 
 **语法**
 
@@ -105,11 +101,11 @@ item1, item2, ..., itemX：必需，要添加到数组中的项。
 向数组的末尾添加一个新的项：
 
 ```javascript
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.push("Kiwi");
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.push('Kiwi')
 // 数组fruits将变为["Banana", "Orange", "Apple", "Mango", "Kiwi"]
 
-document.getElementById("demo").innerHTML = fruits.push("Lemon");
+document.getElementById('demo').innerHTML = fruits.push('Lemon')
 // innerHTML的值为5
 ```
 
@@ -119,7 +115,7 @@ document.getElementById("demo").innerHTML = fruits.push("Lemon");
 
 unshift() 方法将新项添加到数组的开头，并返回新的长度。
 
-注释：unshift() 方法会改变数组的长度。如需在数据的末尾添加新项，请使用push() 方法。 
+注释：unshift() 方法会改变数组的长度。如需在数据的末尾添加新项，请使用 push() 方法。
 
 **语法**
 
@@ -136,11 +132,11 @@ item1, item2, ..., itemX：必需，要添加到数组中的项。
 向数组的开头添加一个新的项：
 
 ```javascript
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.unshift("Lemon","Pineapple");
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.unshift('Lemon', 'Pineapple')
 // 数组fruits将变为["Lemon", "Pineapple", "Banana", "Orange", "Apple", "Mango"]
 
-document.getElementById("demo").innerHTML = fruits.unshift("Lemon", "Pineapple");
+document.getElementById('demo').innerHTML = fruits.unshift('Lemon', 'Pineapple')
 // innerHTML的值为6
 ```
 
@@ -150,7 +146,7 @@ document.getElementById("demo").innerHTML = fruits.unshift("Lemon", "Pineapple")
 
 pop() 方法将移除数组中的最后一个元素，并返回该元素。
 
-注释：pop() 方法会改变数组的长度。如需删除数组的第一个元素，请使用shift() 方法。 
+注释：pop() 方法会改变数组的长度。如需删除数组的第一个元素，请使用 shift() 方法。
 
 **语法**
 
@@ -161,8 +157,8 @@ array.pop()
 **实例**
 
 ```javascript
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.pop();
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.pop()
 // fruits.pop()返回Mango，数组fruits将变为["Banana", "Orange", "Apple"]
 ```
 
@@ -172,7 +168,7 @@ fruits.pop();
 
 shift() 方法将移除数组中的第一个元素，并返回该元素。
 
-注释：shift() 方法会改变数组的长度，shift() 方法会改变原始数组。如需删除数组的最后一个元素，请使用pop() 方法。 
+注释：shift() 方法会改变数组的长度，shift() 方法会改变原始数组。如需删除数组的最后一个元素，请使用 pop() 方法。
 
 **语法**
 
@@ -183,8 +179,8 @@ array.shift()
 **实例**
 
 ```javascript
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.shift();
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.shift()
 // fruits.shift()返回Banana，数组fruits将变为["Orange", "Apple", "Mango"]
 ```
 
@@ -196,8 +192,8 @@ find() 方法返回数组中第一个通过测试的元素的值（作为函数�
 
 find() 方法对数组中存在的每个元素执行一次函数：
 
-- 如果找到函数返回true值的数组元素，则find() 返回该数组元素的值（并且不检查剩余值）
-- 否则返回undefined
+- 如果找到函数返回 true 值的数组元素，则 find() 返回该数组元素的值（并且不检查剩余值）
+- 否则返回 undefined
 
 注意：find() 不对空数组执行该函数，且不会改变原数组。
 
@@ -209,7 +205,7 @@ array.find(function(currentValue, index, arr), thisValue)
 
 **参数**
 
-function(currentValue,  index,  arr)：必需。为数组中的每个元素运行的函数。
+function(currentValue, index, arr)：必需。为数组中的每个元素运行的函数。
 
 currentValue：必需。当前元素的值。
 
@@ -221,17 +217,17 @@ thisValue：可选。对象作为该执行回调时使用，传递给函数，�
 
 **实例**
 
-获取数组中第一个值为18或者更大的元素的值：
+获取数组中第一个值为 18 或者更大的元素的值：
 
 ```javascript
-var ages = [3, 10, 18, 20];
+var ages = [3, 10, 18, 20]
 
 function checkAdult(age) {
-  return age >= 18;
+  return age >= 18
 }
 
 function myFunction() {
-  document.getElementById("demo").innerHTML = ages.find(checkAdult);
+  document.getElementById('demo').innerHTML = ages.find(checkAdult)
 }
 // 返回18
 ```
@@ -244,8 +240,8 @@ some() 方法用于检测数组中的元素是否满足指定条件（通过函�
 
 some() 方法会依次执行数组的每个元素：
 
-- 如果有一个元素满足条件，则表达式返回ture，剩余的元素不会再执行检测。
-- 如果没有满足条件的元素，则返回false。
+- 如果有一个元素满足条件，则表达式返回 ture，剩余的元素不会再执行检测。
+- 如果没有满足条件的元素，则返回 false。
 
 注意：some() 不会检测空数组，不会改变原始数组。
 
@@ -257,7 +253,7 @@ array.some(function(currentValue,index,arr),thisValue)
 
 **参数**
 
-function(currentValue,  index,  arr)：必需。为数组中的每个元素运行的函数。
+function(currentValue, index, arr)：必需。为数组中的每个元素运行的函数。
 
 currentValue：必需。当前元素的值。
 
@@ -269,17 +265,17 @@ thisValue：可选。对象作为该执行回调时使用，传递给函数，�
 
 **实例**
 
-检测数组中是否含有大于18的元素：
+检测数组中是否含有大于 18 的元素：
 
 ```javascript
-var ages = [3, 10, 18, 20];
+var ages = [3, 10, 18, 20]
 
 function checkAdult(age) {
-    return age >= 18;
+  return age >= 18
 }
 
 function myFunction() {
-    document.getElementById("demo").innerHTML = ages.some(checkAdult);
+  document.getElementById('demo').innerHTML = ages.some(checkAdult)
 }
 // 输出结果为true
 ```
@@ -292,8 +288,8 @@ every() 方法用于检测数组所有元素是否都满足指定条件（通过
 
 every() 方法会依次检测数组的所有元素：
 
-- 如果有一个元素不满足条件，则表达式返回false，剩余的元素不会再执行检测。
-- 如果所有元素都满足条件，则返回true。
+- 如果有一个元素不满足条件，则表达式返回 false，剩余的元素不会再执行检测。
+- 如果所有元素都满足条件，则返回 true。
 
 注意：every() 不会检测空数组，不会改变原始数组。
 
@@ -305,7 +301,7 @@ array.every(function(currentValue,index,arr), thisValue)
 
 **参数**
 
-function(currentValue,  index,  arr)：必需。为数组中的每个元素运行的函数。
+function(currentValue, index, arr)：必需。为数组中的每个元素运行的函数。
 
 currentValue：必需。当前元素的值。
 
@@ -317,17 +313,17 @@ thisValue：可选。对象作为该执行回调时使用，传递给函数，�
 
 **实例**
 
-检测数组中的元素是否都大于等于18：
+检测数组中的元素是否都大于等于 18：
 
 ```javascript
-var ages = [32, 33, 16, 40];
+var ages = [32, 33, 16, 40]
 
 function checkAdult(age) {
-    return age >= 18;
+  return age >= 18
 }
 
 function myFunction() {
-    document.getElementById("demo").innerHTML = ages.every(checkAdult);
+  document.getElementById('demo').innerHTML = ages.every(checkAdult)
 }
 // 输出结果为false
 ```
@@ -350,7 +346,7 @@ array.map(function(currentValue,index,arr), thisValue)
 
 **参数**
 
-function(currentValue,  index,  arr)：必需。为数组中的每个元素运行的函数。
+function(currentValue, index, arr)：必需。为数组中的每个元素运行的函数。
 
 currentValue：必需。当前元素的值。
 
@@ -365,11 +361,11 @@ thisValue：可选。对象作为该执行回调时使用，传递给函数，�
 返回一个数组，数组中的元素为原始数组的平方根：
 
 ```javascript
-var numbers = [4, 9, 16, 25];
+var numbers = [4, 9, 16, 25]
 
 function myFunction() {
-    x = document.getElementById("demo")
-    x.innerHTML = numbers.map(Math.sqrt);
+  x = document.getElementById('demo')
+  x.innerHTML = numbers.map(Math.sqrt)
 }
 // 输出结果为2，3，4，5
 ```
@@ -380,7 +376,7 @@ function myFunction() {
 
 reduce() 接收一个函数作为累加器，数组中的每个数（从左到右）开始缩减，最终计算为一个值。
 
-reduce() 可以作为一个高阶函数，用于函数的compose。
+reduce() 可以作为一个高阶函数，用于函数的 compose。
 
 注意：reduce() 对于空数组是不会执行回调函数的。
 
@@ -392,9 +388,9 @@ array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
 
 **参数**
 
-function(total, currentValue,  currentIndex,  arr)：必需。为数组中的每个元素运行的函数。
+function(total, currentValue, currentIndex, arr)：必需。为数组中的每个元素运行的函数。
 
-total：必需。*初始值*, 或者计算结束后的返回值。
+total：必需。_初始值_, 或者计算结束后的返回值。
 
 currentValue：必需。当前元素的值。
 
@@ -409,13 +405,13 @@ initialValue：可选。传递给函数的初始值。
 计算数组元素相加后的总和：
 
 ```javascript
-var numbers = [65, 44, 12, 4];
- 
+var numbers = [65, 44, 12, 4]
+
 function getSum(total, num) {
-    return total + num;
+  return total + num
 }
 function myFunction(item) {
-    document.getElementById("demo").innerHTML = numbers.reduce(getSum);
+  document.getElementById('demo').innerHTML = numbers.reduce(getSum)
 }
 // 输出结果为125
 ```
@@ -449,8 +445,8 @@ item1,.....,itemX：可选。要添加到数组的新元素。
 数组中添加新元素：
 
 ```javascript
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.splice(2,0,"Lemon","Kiwi");
+var fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.splice(2, 0, 'Lemon', 'Kiwi')
 // 输出结果为Banana,Orange,Lemon,Kiwi,Apple,Mango
 ```
 
@@ -479,10 +475,10 @@ array2,array3,...,arrayX：必需。该参数可以是具体的值，也可以�
 合并三个数组的值：
 
 ```javascript
-var hege = ["Cecilie", "Lone"];
-var stale = ["Emil", "Tobias", "Linus"];
-var kai = ["Robin"];
-var children = hege.concat(stale,kai);
+var hege = ['Cecilie', 'Lone']
+var stale = ['Emil', 'Tobias', 'Linus']
+var kai = ['Robin']
+var children = hege.concat(stale, kai)
 // 输出结果为Cecilie,Lone,Emil,Tobias,Linus,Robin
 ```
 
@@ -502,7 +498,7 @@ array.filter(function(currentValue,index,arr), thisValue)
 
 **参数**
 
-function(currentValue,  index,  arr)：必需。为数组中的每个元素运行的函数。
+function(currentValue, index, arr)：必需。为数组中的每个元素运行的函数。
 
 currentValue：必需。当前元素的值。
 
@@ -517,17 +513,14 @@ thisValue：可选。对象作为该执行回调时使用，传递给函数，�
 返回数组 ages 中所有元素都大于 18 的元素:
 
 ```javascript
-var ages = [32, 33, 16, 40];
+var ages = [32, 33, 16, 40]
 
 function checkAdult(age) {
-    return age >= 18;
+  return age >= 18
 }
 
 function myFunction() {
-    document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+  document.getElementById('demo').innerHTML = ages.filter(checkAdult)
 }
 // 输出结果为32,33,40
 ```
-
-
-

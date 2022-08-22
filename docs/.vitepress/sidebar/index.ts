@@ -8,15 +8,16 @@ export default {
         text: 'JavaScript',
         collapsible: true,
         items: [
-          { text: 'Array Basic Operation', link: '/document/js-array'}
+          { text: 'Array', link: '/document/JS-Array'},
+          { text: 'String', link: '/document/JS-String'}
         ]
       },
       {
         text: 'TypeScript',
         collapsible: true,
         items: [
-          { text: 'Introduction', link: '/document/typescript' },
-          { text: 'Question', link: '/document/ts-question' },
+          { text: 'Introduction', link: '/document/TypeScript' },
+          { text: 'FAQ', link: '/document/TS-FAQ' },
         ]
       },
       {
