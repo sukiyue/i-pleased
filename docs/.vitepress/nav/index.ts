@@ -5,6 +5,6 @@
 export default [ 
   { text: 'Guide', link: '/guide/' },
   {
-    text: 'Document', link: '/document/javascript/js-array'
+    text: 'Document', link: '/document/javascript/JS-Array'
   }
 ]
