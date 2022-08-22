@@ -9,7 +9,7 @@
 
 当写完代码后，在进行如下操作之后
 
-```shell
+```bash
 git add .
 git commit -m 'xxx'
 ```
@@ -18,7 +18,7 @@ git commit -m 'xxx'
 
 - 修改注释信息
 
-```shell
+```bash
 git commit --amend
 ```
 
@@ -26,7 +26,7 @@ git commit --amend
 
 - 撤回 commit
 
-```shell
+```bash
 git reset --soft HEAD^
 ```
 
