@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./app.dc6767ee.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"document/ts-question.md","lastUpdated":1659404483000}'),s={name:"document/ts-question.md"};function o(n,r,c,d,i,p){return a(),e("div")}var u=t(s,[["render",o]]);export{m as __pageData,u as default};
