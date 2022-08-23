@@ -1,9 +1,9 @@
 <!--
- * @Description: Git常见问题解答
+ * @Description: 学习使用 Git 遇到的一些问题
  * @Date: 2022-08-22 14:18:45
 -->
 
-# 使用 Git 遇到的一些问题
+# 学习使用 Git 遇到的一些问题
 
 ## git 撤销上次提交 commit
 

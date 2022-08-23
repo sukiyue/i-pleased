@@ -9,7 +9,8 @@ export default {
         collapsible: true,
         items: [
           { text: 'Array', link: '/document/javascript/JS-Array'},
-          { text: 'String', link: '/document/javascript/JS-String'}
+          { text: 'String', link: '/document/javascript/JS-String'},
+          { text: 'Traversal Method', link: '/document/javascript/JS-Traversal-Method'}
         ]
       },
       {
@@ -17,7 +18,16 @@ export default {
         collapsible: true,
         items: [
           { text: 'Introduction', link: '/document/typescript/TypeScript' },
-          { text: 'FAQ', link: '/document/typescript/TS-FAQ' },
+          { text: 'FAQ', link: '/document/typescript/FAQ' },
+        ]
+      },
+      {
+        text: 'Vue',
+        collapsible: true,
+        items: [
+          { text: 'Vue', link: '/document/Vue/Vue' },
+          { text: 'Vue3', link: '/document/Vue/Vue3' },
+          { text: 'FAQ', link: '/document/Vue/FAQ' },
         ]
       },
       {
