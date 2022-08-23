@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./app.355e27b8.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"document/typescript/TS-FAQ.md","lastUpdated":1661151152000}'),r={name:"document/typescript/TS-FAQ.md"};function c(o,s,n,p,d,i){return a(),e("div")}const f=t(r,[["render",c]]);export{m as __pageData,f as default};
