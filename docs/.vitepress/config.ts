@@ -2,43 +2,19 @@
  * @Description: 配置 
  */
 import { defineConfig } from 'vitepress'
-import nav from './nav'
-import sidebar from './sidebar'
+import { head } from './config/head'
+import { markdown } from './config/markdown'
+import { themeConfig } from './config/themeConfig'
 
 export default defineConfig({
    // These are app level configs.
   lang: 'en-US', //
   title: 'IPleased',
-  description: 'Just playing around.',
+  description: 'Full into the moon.',
   base: '/i-pleased/',
-  markdown: {
-    theme: 'material-palenight',
-    lineNumbers: true
-  },
-  lastUpdated: true,
+  lastUpdated: true, // 显示最后更新时间
 
-   // Theme related configurations.
-  themeConfig: {
-    logo: '/logo.svg',   
-    // siteTitle: 'Hello World', 
-    // algolia: {
-    //   apiKey: 'your_api_key',
-    //   indexName: 'index_name'
-    // },
-    nav,
-    sidebar,
-    // 社交链接
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/sukiyue' },
-    ],
-    footer: {
-      // message: 'You are special.',
-      copyright: 'Copyright © 2022-present sukiyue'
-    },
-    lastUpdatedText: 'Updated Date',
-    docFooter: {
-      prev: 'Pagina prior',
-      next: 'Proxima pagina'
-    }
-  },
+  head: head,  // <head>内标签配置
+  markdown, // Markdown配置
+  themeConfig,   // 主题配置
 })
