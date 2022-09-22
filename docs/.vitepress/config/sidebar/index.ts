@@ -1,4 +1,9 @@
 /*
+ * @Description: file content
+ * @Author: sukiyue
+ * @Date: 2022-09-19 13:16:27
+ */
+/*
  * @Description: 侧边栏导航
  */
 
@@ -13,6 +18,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           { text: 'HTML', link: '/document/HTML/html'}
         ]
       },  
+      {
+        text: 'CSS',
+        collapsible: true,
+        items: [
+          { text: 'CSS', link: '/document/CSS/css'}
+        ]
+      }, 
       {
         text: 'JavaScript',
         collapsible: true,
