@@ -15,7 +15,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         text: 'HTML',
         collapsible: true,
         items: [
-          { text: 'HTML', link: '/document/html/html'}
+          { text: 'HTML', link: '/document/html/Html'}
         ]
       },  
       {
