@@ -15,14 +15,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         text: 'HTML',
         collapsible: true,
         items: [
-          { text: 'HTML', link: '/document/HTML/html'}
+          { text: 'HTML', link: '/document/html/html'}
         ]
       },  
       {
         text: 'CSS',
         collapsible: true,
         items: [
-          { text: 'CSS', link: '/document/CSS/css'}
+          { text: 'CSS', link: '/document/css/css'}
         ]
       }, 
       {
