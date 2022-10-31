@@ -33,7 +33,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         text: 'EcmaScript6',
         collapsible: true,
         items: [
-          { text: 'Module', link: '/document/ecmaScript6/Module'},
+          { text: 'Module', link: '/document/es6/Module'},
         ]
       },
       {
