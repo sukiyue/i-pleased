@@ -8,9 +8,16 @@ import { sidebar } from './sidebar'
 
 export const themeConfig: DefaultTheme.Config = {
   logo: '/logo.svg',   
+  // localeLinks: {
+  //   text: '',
+  //   items: [
+  //     { text: '简体中文', link: '/' },
+  //     { text: 'English', link: '/en-US/' },
+  //   ],
+  // },
+
   nav, // 导航栏配置
   sidebar, // 侧边栏配置
-
   lastUpdatedText: 'Updated Date',
 
   // 社交链接

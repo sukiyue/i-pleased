@@ -1,9 +1,4 @@
 /*
- * @Description: file content
- * @Author: sukiyue
- * @Date: 2022-09-19 13:16:27
- */
-/*
  * @Description: 侧边栏导航
  */
 
@@ -32,6 +27,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           { text: 'Array', link: '/document/javascript/JS-Array'},
           { text: 'String', link: '/document/javascript/JS-String'},
           { text: 'Traversal Method', link: '/document/javascript/JS-Traversal-Method'}
+        ]
+      },
+      {
+        text: 'EcmaScript6',
+        collapsible: true,
+        items: [
+          { text: 'Module', link: '/document/ecmaScript6/Module'},
         ]
       },
       {

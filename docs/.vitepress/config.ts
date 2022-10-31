@@ -9,6 +9,20 @@ import { themeConfig } from './config/themeConfig'
 export default defineConfig({
    // These are app level configs.
   lang: 'en-US', //
+  // locales: {
+  //   // 键名是该语言所属的子路径
+  //   // 作为特例，默认语言可以使用 '/' 作为其路径。
+  //   '/': {
+  //     lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
+  //     title: 'I-Pleased',
+  //     // description: ''
+  //   },
+  //   '/zh/': {
+  //     lang: 'zh-CN',
+  //     title: 'I-Pleased',
+  //     // description: ''
+  //   }
+  // },
   title: 'IPleased',
   description: 'Full into the moon.',
   base: '/i-pleased/',
