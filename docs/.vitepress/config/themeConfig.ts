@@ -19,7 +19,8 @@ export const themeConfig: DefaultTheme.Config = {
   nav, // 导航栏配置
   sidebar, // 侧边栏配置
   lastUpdatedText: 'Updated Date',
-
+  outline: [2,3],
+  outlineTitle: '目录',
   // 社交链接
   socialLinks: [
     { icon: 'github', link: 'https://github.com/sukiyue' },

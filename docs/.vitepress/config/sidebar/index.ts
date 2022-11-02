@@ -64,7 +64,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/note/': [
     {
-      text: 'ES6基础',
+      text: 'EcmaScript6语法入门',
       collapsible: true,
       items: [
         { text: 'Proxy', link: '/note/ecmascript6/Proxy' },
