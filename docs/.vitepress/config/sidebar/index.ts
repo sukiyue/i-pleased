@@ -33,6 +33,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         text: 'EcmaScript6',
         collapsible: true,
         items: [
+          { text: 'Proxy', link: '/document/es6/Proxy'},
+          { text: 'Promise', link: '/document/es6/Promise'},
           { text: 'Module', link: '/document/es6/Module'},
         ]
       },
