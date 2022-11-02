@@ -30,15 +30,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         ]
       },
       {
-        text: 'EcmaScript6',
-        collapsible: true,
-        items: [
-          { text: 'Proxy', link: '/document/es6/Proxy'},
-          { text: 'Promise', link: '/document/es6/Promise'},
-          { text: 'Module', link: '/document/es6/Module'},
-        ]
-      },
-      {
         text: 'TypeScript',
         collapsible: true,
         items: [
@@ -70,5 +61,16 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           { text: 'FAQ', link: '/document/git/FAQ' }
         ]
       }
+  ],
+  '/note/': [
+    {
+      text: 'ES6基础',
+      collapsible: true,
+      items: [
+        { text: 'Proxy', link: '/note/ecmascript6/Proxy' },
+        { text: 'Promise', link: '/note/ecmascript6/Promise' },
+        { text: 'Module', link: '/note/ecmascript6/Module' },
+      ]
+    }
   ]
 }
