@@ -5,9 +5,16 @@
 
 import DefaultTheme from 'vitepress/theme'
 import './custom.styl'
+import { h } from 'vue'
+import Layout from './components/Layout.vue'
 
 export default {
   ...DefaultTheme,
+  // Layout() {
+  //   return h(DefaultTheme.Layout, null, {
+  //     'home-hero-before': () => h(Layout)
+  //   })
+  // },
   enhanceApp({ app }) {
   }
 }
