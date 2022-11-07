@@ -36,7 +36,7 @@ hero:
 }
 
 .VPHome {
-  padding: 96px;
+  padding: 96px 0;
   height: 100vh;
   background-image: -webkit-linear-gradient(top,
       rgba(0,0,0,0.6) 0%,
@@ -57,7 +57,7 @@ hero:
   &::after {
     content: ' ';
     height: 100%;
-    width: 98%;
+    width: 100%;
     top: 0;
     left: 0;
     position: fixed;
