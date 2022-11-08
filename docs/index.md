@@ -24,6 +24,7 @@ hero:
 ---
 
 <SukanaWidget />
+<Sakura />
 
 <script>
 

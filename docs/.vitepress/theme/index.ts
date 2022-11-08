@@ -8,6 +8,7 @@ import './custom.styl'
 // import { h } from 'vue'
 // import Layout from './components/Layout.vue'
 import SukanaWidget from './components/sakana-widget.vue'
+import Sakura from './components/Sakura.vue'
 
 export default {
   ...DefaultTheme,
@@ -18,5 +19,6 @@ export default {
   // },
   enhanceApp({ app }) {
     app.component('SukanaWidget', SukanaWidget)
+    app.component('Sakura', Sakura)
   }
 }

@@ -67,9 +67,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'EcmaScript6语法入门',
       collapsible: true,
       items: [
+        { text: 'Introduction', link: '/note/ecmascript6/index' },
         { text: 'Proxy', link: '/note/ecmascript6/Proxy' },
         { text: 'Promise', link: '/note/ecmascript6/Promise' },
         { text: 'Module', link: '/note/ecmascript6/Module' },
+        { text: 'Iterator', link: '/note/ecmascript6/Iterator' },
       ]
     }
   ]

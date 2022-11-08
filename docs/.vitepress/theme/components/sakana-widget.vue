@@ -9,10 +9,8 @@ import { onMounted } from 'vue';
 
 onMounted(() => {
     const el = document.getElementById('sakana-widget')
-    new SakanaWidget().mount(el);
+    new SakanaWidget().setState({ i: 0.01, d: 0.99}).mount(el);
 })
-
-
 </script>
 
 <style scoped>

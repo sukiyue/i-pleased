@@ -13,7 +13,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: 'Note', 
     items: [
       {
-        text: 'EcmaScript6', link:'/note/ecmascript6/Proxy'
+        text: 'EcmaScript6', link:'/note/ecmascript6/index'
       }
     ]
   }
