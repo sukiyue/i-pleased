@@ -152,5 +152,6 @@ hero:
   position: fixed;
   right: 0;
   bottom: 0;
+  z-index: 101;
 }
 </style>
