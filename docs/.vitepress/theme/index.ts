@@ -5,8 +5,9 @@
 
 import DefaultTheme from 'vitepress/theme'
 import './custom.styl'
-import { h } from 'vue'
-import Layout from './components/Layout.vue'
+// import { h } from 'vue'
+// import Layout from './components/Layout.vue'
+import SukanaWidget from './components/sakana-widget.vue'
 
 export default {
   ...DefaultTheme,
@@ -16,5 +17,6 @@ export default {
   //   })
   // },
   enhanceApp({ app }) {
+    app.component('SukanaWidget', SukanaWidget)
   }
 }

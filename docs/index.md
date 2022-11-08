@@ -23,7 +23,7 @@ hero:
 #     details: Lorem ipsum...
 ---
 
-<!-- <Layout /> -->
+<SukanaWidget />
 
 <script>
 
@@ -38,19 +38,19 @@ hero:
 .VPHome {
   padding: 96px 0;
   height: 100vh;
-  background-image: -webkit-linear-gradient(top,
-      rgba(0,0,0,0.6) 0%,
-      rgba(0,0,0,0.3) 20%,
-      rgba(0,0,0,0.3) 80%,
-      rgba(0,0,0,0.6) 100%
+  /* background-image: -webkit-linear-gradient(top,
+      rgba(10,10,10,0.6) 0%,
+      rgba(20,20,20,0.3) 20%,
+      rgba(30,30,30,0.3) 80%,
+      rgba(40,40,40,0.6) 100%
     ),
     -webkit-linear-gradient(left,
-      rgba(0,0,0,0.6) 0%,
-      rgba(0,0,0,0.3) 20%,
-      rgba(0,0,0,0.3) 80%,
-      rgba(0,0,0,0.6) 100%)
-      ,url(/assets/images/bg.png);
-  /* background-image: url(/assets/images/bg.png);  */
+      rgba(10,10,10,0.6) 0%,
+      rgba(20,20,20,0.3) 20%,
+      rgba(30,30,30,0.3) 80%,
+      rgba(40,40,40,0.6) 100%)
+      ,url(/assets/images/bg.png); */
+  background-image: url(/assets/images/bg.png); 
   background-size: cover;
       background-attachment: fixed;
 
@@ -83,9 +83,9 @@ hero:
     animation-name: glitch-anim-1;
   }
 
-  p {
+  /* p {
     color: #fff;
-  }
+  } */
 }
 
 @keyframes glitch-anim-1 {
@@ -146,6 +146,11 @@ hero:
     transform: translate3d(0, 0, 0);
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
   }
+}
 
+#sakana-widget {
+  position: fixed;
+  right: 0;
+  bottom: 0;
 }
 </style>

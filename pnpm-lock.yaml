@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   gh-pages: ^4.0.0
   pnpm: ^7.6.0
+  sakana-widget: ^2.4.1
   stylus: ^0.59.0
   stylus-loader: ^7.1.0
   vitepress: ^1.0.0-alpha.26
@@ -11,6 +12,7 @@ specifiers:
 
 dependencies:
   pnpm: 7.6.0
+  sakana-widget: 2.4.1
 
 devDependencies:
   gh-pages: registry.npmmirror.com/gh-pages/4.0.0
@@ -251,6 +253,10 @@ packages:
   /@francoischalifour/autocomplete-preset-algolia/1.0.0-alpha.28:
     resolution: {integrity: sha512-bprfNmYt1opFUFEtD2XfY/kEsm13bzHQgU80uMjhuK0DJ914IjolT1GytpkdM6tJ4MBvyiJPP+bTtWO+BZ7c7w==}
     dev: true
+
+  /@juggle/resize-observer/3.4.0:
+    resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1670,6 +1676,12 @@ packages:
   /safe-buffer/5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
     dev: true
+
+  /sakana-widget/2.4.1:
+    resolution: {integrity: sha512-1CyasxRJhRJfPztAVuxQFvuc+KOyu/sAww+ZAIEszs5ghA64pm8oNk7E9civMvvWJvhmSYiLu+PIEAWk2QW2lQ==}
+    dependencies:
+      '@juggle/resize-observer': 3.4.0
+    dev: false
 
   /sax/1.2.4:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
