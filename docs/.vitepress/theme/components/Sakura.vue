@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import img1 from '/assets/images/sakura.png'
 class Sakura {
     constructor (x, y, s, r, fn, that, img) {
         this.x = x;
@@ -140,7 +141,7 @@ export default {
             var cxt = this.$refs.canvas_sakura.getContext('2d');
             var sakuraList = new SakuraList();
             const img = new Image();
-            img.src = '/assets/images/sakura.png'; //樱花效果图相对路径
+            img.src = img1; //樱花效果图相对路径
 
             // if (!SAKURA_IMG.replace) {
             //     img.src = require('/assets/images/sakura.png'); //樱花效果图相对路径
