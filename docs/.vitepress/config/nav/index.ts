@@ -14,6 +14,9 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       {
         text: 'EcmaScript6', link:'/note/ecmascript6/index'
+      },
+      {
+        text: 'Thymeleaf', link:'/note/thymeleaf/index'
       }
     ]
   }
