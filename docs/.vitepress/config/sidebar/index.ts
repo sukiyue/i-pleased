@@ -34,18 +34,18 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         collapsible: true,
         items: [
           { text: 'Introduction', link: '/document/typescript/TypeScript' },
-          { text: 'FAQ', link: '/document/typescript/FAQ' },
+          // { text: 'FAQ', link: '/document/typescript/FAQ' },
         ]
       },
-      {
-        text: 'Vue',
-        collapsible: true,
-        items: [
-          { text: 'Vue', link: '/document/Vue/Vue' },
-          { text: 'Vue3', link: '/document/Vue/Vue3' },
-          { text: 'FAQ', link: '/document/Vue/FAQ' },
-        ]
-      },
+      // {
+      //   text: 'Vue',
+      //   collapsible: true,
+      //   items: [
+      //     { text: 'Vue', link: '/document/Vue/Vue' },
+      //     { text: 'Vue3', link: '/document/Vue/Vue3' },
+      //     { text: 'FAQ', link: '/document/Vue/FAQ' },
+      //   ]
+      // },
       {
         text: 'Nginx',
         collapsible: true,
@@ -62,7 +62,19 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         ]
       }
   ],
-  '/note/': [
+  '/note/javascript': [
+    {
+      text: 'Javascript',
+      collapsible: true,
+      items: [
+        { text: 'Introduction', link: '/note/javascript/index' },
+        { text: 'Reference Type', link: '/note/javascript/ReferenceType' },
+        { text: 'Object Oriented', link: '/note/javascript/ObjectOriented'},
+        { text: 'Function Methods', link: '/note/javascript/FunctionMethods' },
+      ]
+    }
+  ],
+  '/note/ecmascript6': [
     {
       text: 'EcmaScript6 语法入门',
       collapsible: true,
@@ -74,6 +86,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Iterator', link: '/note/ecmascript6/Iterator' },
       ]
     },
+  ],
+  '/note/thymeleaf': [
     {
       text: 'Thymeleaf 语法入门',
       collapsible: true,

@@ -13,6 +13,9 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: 'Note', 
     items: [
       {
+        text: 'JavaScript', link:'/note/javascript/index'
+      },
+      {
         text: 'EcmaScript6', link:'/note/ecmascript6/index'
       },
       {
