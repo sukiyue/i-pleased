@@ -24,16 +24,16 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         text: 'JavaScript',
         collapsible: true,
         items: [
-          { text: 'Array', link: '/document/javascript/JS-Array'},
-          { text: 'String', link: '/document/javascript/JS-String'},
-          { text: 'Traversal Method', link: '/document/javascript/JS-Traversal-Method'}
+          { text: '数组常用方法', link: '/document/javascript/JS-Array'},
+          { text: '字符串常用方法', link: '/document/javascript/JS-String'},
+          { text: '遍历常用方法', link: '/document/javascript/JS-Traversal-Method'}
         ]
       },
       {
         text: 'TypeScript',
         collapsible: true,
         items: [
-          { text: 'Introduction', link: '/document/typescript/TypeScript' },
+          { text: '基础', link: '/document/typescript/TypeScript' },
           // { text: 'FAQ', link: '/document/typescript/FAQ' },
         ]
       },
@@ -50,14 +50,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         text: 'Nginx',
         collapsible: true,
         items: [
-          { text: 'Introduction', link: '/document/nginx/Nginx' }
+          { text: '基础', link: '/document/nginx/Nginx' }
         ]
       },
       {
         text: 'Git',
         collapsible: true,
         items: [
-          { text: 'Introduction', link: '/document/git/Git' },
+          { text: '基础', link: '/document/git/Git' },
           { text: 'FAQ', link: '/document/git/FAQ' }
         ]
       }
@@ -67,10 +67,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'Javascript',
       collapsible: true,
       items: [
-        { text: 'Introduction', link: '/note/javascript/index' },
-        { text: 'Reference Type', link: '/note/javascript/ReferenceType' },
-        { text: 'Object Oriented', link: '/note/javascript/ObjectOriented'},
-        { text: 'Function Methods', link: '/note/javascript/FunctionMethods' },
+        { text: '简介', link: '/note/javascript/index' },
+        { text: '引用类型', link: '/note/javascript/ReferenceType' },
+        { text: '面向对象', link: '/note/javascript/ObjectOriented'},
+        { text: '函数方法', link: '/note/javascript/FunctionMethods' },
       ]
     }
   ],
@@ -79,7 +79,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'EcmaScript6 语法入门',
       collapsible: true,
       items: [
-        { text: 'Introduction', link: '/note/ecmascript6/index' },
+        { text: '简介', link: '/note/ecmascript6/index' },
         { text: 'Proxy', link: '/note/ecmascript6/Proxy' },
         { text: 'Promise', link: '/note/ecmascript6/Promise' },
         { text: 'Module', link: '/note/ecmascript6/Module' },
