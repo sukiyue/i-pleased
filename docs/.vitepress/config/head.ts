@@ -8,4 +8,7 @@ export const head: HeadConfig[] = [
   ['link', { rel: 'icon', href: '/favicon.ico' }],
   ['meta', { name: 'author', content: 'sukiyue' }],
   ['meta', { name: 'keywords', content: 'FULL INTO THE MOON' }],
+  // 添加图片放大预览效果
+  ["link", { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" },],
+  ["script", { src: "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js" }],
 ]
