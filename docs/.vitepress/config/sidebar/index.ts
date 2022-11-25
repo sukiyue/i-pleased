@@ -71,6 +71,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '引用类型', link: '/note/javascript/ReferenceType' },
         { text: '面向对象', link: '/note/javascript/ObjectOriented'},
         { text: '原型', link: '/note/javascript/Prototype'},
+        { text: '闭包', link: '/note/javascript/Closure'},
         { text: '函数方法', link: '/note/javascript/FunctionMethods' },
       ]
     }
