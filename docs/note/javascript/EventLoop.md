@@ -6,6 +6,8 @@
 
 Philip Roberts的演讲：[到底什么是Event Loop呢？ | 欧洲 JSConf 2014](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
+[浏览器与Node的事件循环(Event Loop)有何区别?](https://blog.csdn.net/z591102/article/details/111588572)
+
 ## 为什么 JavaScript 是单线程？
  
 JavaScript 是一门单线程的语言，单线程运行意味着只有一个调用栈，同一时刻只能做一件事。单线程就是这个意思，程序的代码只能一段一段地执行。
@@ -142,7 +144,103 @@ JavaScript 把异步任务分为宏任务和微任务。
 
 ## Node 环境中 Event Loop 
 
+### Node.js 运行机制
+
+`Node.js` 采用 `V8` 作为 js 的解析引擎，I/O 处理方面使用了 `libuv`，`libuv` 是一个基于事件驱动的异步 IO 库。
+
 <img src="/assets/images/note/javascript/eventLoop/nodeEventLoop.jpeg" data-fancybox="gallery" />
+
+Node.js 的运行机制如下：
+
+- V8 引擎解析 JavaScript 脚本。
+- 解析后的代码，调用 Node API。
+- libuv 库负责 Node API 的执行。它将不同的任务分配给不同的线程，形成一个 Event Loop，以异步的方式将执行的结果返回给 V8 引擎。
+- V8 引擎再将结果返回给用户。
+
+### libuv引擎中事件循环的 6 个阶段
+
+其中 libuv 引擎的事件循环分为 6 个阶段，它们按照顺序反复运行。每当进入某一阶段的时候，就会在对应的回调队列里调用函数去执行。当队列为空或者执行的回调函数数量达到系统设定的阈值，就会进入下一阶段。
+
+<img src="/assets/images/note/javascript/eventLoop/nodeEventLoop2.png" data-fancybox="gallery" />
+
+- **timers 阶段**：这个阶段执行 timer（setTimeout、setInterval） 的回调
+- **I/O callbacks 阶段**：处理一些上一轮循环中少数未执行的 I/O 回调
+- **idle，prepare 阶段**：仅 node 内部使用
+- **poll 阶段**：检索新的 I/O 事件，执行与 I/O 相关的回调，适当的条件下 node 将阻塞在这里
+- **check 阶段**： 执行setImmediate（）的回调
+- **close callbacks 阶段**：执行 socket 的 close 事件回调
+
+### setTimeout 和 setImmediate
+
+二者非常相似，区别在于调用的时机不同。
+
+- setImmedaite 设计在 `poll` 阶段完成时执行，即在 `check` 阶段。
+- setTimeout 设计在 `poll` 阶段在空闲时，且在设定时间到达后执行，但它在 `timer` 阶段执行。
+
+```js
+setTimeout(function timeout () {
+  console.log('timeout');
+},0);
+
+setImmediate(function immediate () {
+  console.log('immediate');
+});
+```
+上面代码中，`setTimeout` 可能执行在前，也可能执行在后，因为受到进程性能的约束。
+
+但是如果把这两个函数放入一个 I/O 循环内调用，`setImmediate` 总是被优先调用。
+
+```js
+const fs = require('fs');
+
+fs.readFile(__filename, () => {
+  setTimeout(() => {
+    console.log('timeout');
+  }, 0);
+  setImmediate(() => {
+    console.log('immediate');
+  });
+});
+// immediate
+// timeout
+```
+上面代码中，`setImmediate` 永远先执行。因为两个代码写在 I/O 回调中，I/O 回调是在 `poll` 阶段执行，当回调执行完毕后队列为空，发现存在 `setImmediate` 回调，所以就直接跳转到 `check` 阶段去执行回调了。
+
+### process.nextTick()
+
+这个函数其实是独立于 Event Loop 之外的，它有一个自己的队列，当每个阶段完成后，如果存在 nextTick 队列，就会清空队列中的所有回调函数，并且优于其他微任务执行。
+
+```js
+setTimeout(() => {
+ console.log('timer1')
+ Promise.resolve().then(function() {
+   console.log('promise1')
+ })
+}, 0)
+process.nextTick(() => {
+ console.log('nextTick')
+ process.nextTick(() => {
+   console.log('nextTick')
+   process.nextTick(() => {
+     console.log('nextTick')
+     process.nextTick(() => {
+       console.log('nextTick')
+     })
+   })
+ })
+})
+// nextTick=>nextTick=>nextTick=>nextTick=>timer1=>promise1
+```
+
+## Node 与浏览器环境下 Event Loop 的差异
+
+浏览器环境下，微任务的任务队列是在每个宏任务执行完后之后执行。
+
+<img src="/assets/images/note/javascript/eventLoop/eventLoop2.png" data-fancybox="gallery" />
+
+而在 Node.js 中，微任务会在事件循环的各个阶段之间执行，也就是一个阶段执行完毕，就会去执行微任务队列的任务。
+
+<img src="/assets/images/note/javascript/eventLoop/nodeEventLoop3.png" data-fancybox="gallery" />
 
 
 
