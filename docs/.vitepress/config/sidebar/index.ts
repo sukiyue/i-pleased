@@ -74,6 +74,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '闭包', link: '/note/javascript/Closure'},
         { text: '函数方法', link: '/note/javascript/FunctionMethods' },
         { text: '事件循环', link: '/note/javascript/EventLoop' },
+        { text: '垃圾回收机制', link: '/note/javascript/GarbageCollection' },
       ]
     }
   ],
