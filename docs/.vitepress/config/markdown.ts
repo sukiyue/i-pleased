@@ -14,5 +14,5 @@ export const markdown: MarkdownOptions = {
     md.use(mdItCustomAttrs, 'image', {
         'data-fancybox': "gallery"
     })
-    }
+  }
 }

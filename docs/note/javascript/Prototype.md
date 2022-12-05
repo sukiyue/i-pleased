@@ -24,7 +24,7 @@ console.log(person.name) // zhy
 
 构造函数与实例原型之间的关系为：
 
-<img src="/assets/images/note/javascript/prototype/prototype1.png" data-fancybox="gallery" />
+<img src="/assets/images/note/javascript/prototype/prototype1.png" alt="prototype" data-fancybox="gallery" />
 
 上图表明构造函数与实例原型之间的关系，那么要表示实例与实例原型之间的关系就需要用到 `__proto__` 属性。
 
@@ -44,7 +44,7 @@ console.log(person.__proto__ === Person.prototype) // true
 ```
 那么实例与实例原型之间的关系为 `person.__proto__ == Person.prototype`。即如下图：
 
-<img src="/assets/images/note/javascript/prototype/prototype2.png" data-fancybox="gallery" />
+<img src="/assets/images/note/javascript/prototype/prototype2.png" alt="__proto__" data-fancybox="gallery" />
 
 ## constructor
 
@@ -60,7 +60,7 @@ console.log(Person === Person.prototype.constructor) // true
 ```
 那么构造函数与实例原型之间关系为 `Person === Person.prototype.constructor`。即如下图：
 
-<img src="/assets/images/note/javascript/prototype/prototype3.png" data-fancybox="gallery" />
+<img src="/assets/images/note/javascript/prototype/prototype3.png" alt="构造函数与实例原型之间的关系" data-fancybox="gallery" />
 
 ## 实例与原型的关系
 
@@ -93,13 +93,13 @@ obj.name = 'zhy'
 ```
 原型对象就是通过 Object 构造函数生成的，其实例的 `__proto__` 指向构造函数的 `prototype`。
 
-<img src="/assets/images/note/javascript/prototype/prototype4.png" data-fancybox="gallery" />
+<img src="/assets/images/note/javascript/prototype/prototype4.png" alt="原型的原型" data-fancybox="gallery" />
 
 ## 原型链
 
 Object.prototype 的原型为 null。所以在查找属性的时候，查找到 Object.prototype 上就可以停止查找了。
 
-<img src="/assets/images/note/javascript/prototype/prototype5.png" data-fancybox="gallery" />
+<img src="/assets/images/note/javascript/prototype/prototype5.png" alt="原型链" data-fancybox="gallery" />
 
 图中由相互关联的原型组成的链状结构就是原型链，也就是蓝色的线。
 

@@ -72,7 +72,7 @@ JavaScript 运行时同一时刻只能做一件事情，它不能在发送 Ajax 
 
 事件循环必须等到栈清空，才会将队列中的任务压入栈中。
 
-<img src="/assets/images/note/javascript/eventLoop/eventLoop1.png" data-fancybox="gallery" />
+<img src="/assets/images/note/javascript/eventLoop/eventLoop1.png" alt="事件循环" data-fancybox="gallery" />
 
 上图中，主线程运行的时候，产生了堆（heap）和栈（stack），栈中的代码调用各种外部API，它们在任务队列中加入了各种事件（click、load和done）。只要栈中的代码执行完毕，主线程就会从任务队列中读取，依次执行那些事件对应的回调函数。
 
@@ -148,7 +148,7 @@ JavaScript 把异步任务分为宏任务和微任务。
 
 `Node.js` 采用 `V8` 作为 js 的解析引擎，I/O 处理方面使用了 `libuv`，`libuv` 是一个基于事件驱动的异步 IO 库。
 
-<img src="/assets/images/note/javascript/eventLoop/nodeEventLoop.jpeg" data-fancybox="gallery" />
+<img src="/assets/images/note/javascript/eventLoop/nodeEventLoop.jpeg" alt="Node.js运行机制" data-fancybox="gallery" />
 
 Node.js 的运行机制如下：
 
@@ -161,7 +161,7 @@ Node.js 的运行机制如下：
 
 其中 libuv 引擎的事件循环分为 6 个阶段，它们按照顺序反复运行。每当进入某一阶段的时候，就会在对应的回调队列里调用函数去执行。当队列为空或者执行的回调函数数量达到系统设定的阈值，就会进入下一阶段。
 
-<img src="/assets/images/note/javascript/eventLoop/nodeEventLoop2.png" data-fancybox="gallery" />
+<img src="/assets/images/note/javascript/eventLoop/nodeEventLoop2.png" alt="libuv引擎中事件循环的6个阶段" data-fancybox="gallery" />
 
 - **timers 阶段**：这个阶段执行 timer（setTimeout、setInterval） 的回调
 - **I/O callbacks 阶段**：处理一些上一轮循环中少数未执行的 I/O 回调
@@ -236,11 +236,11 @@ process.nextTick(() => {
 
 浏览器环境下，微任务的任务队列是在每个宏任务执行完后之后执行。
 
-<img src="/assets/images/note/javascript/eventLoop/eventLoop2.png" data-fancybox="gallery" />
+<img src="/assets/images/note/javascript/eventLoop/eventLoop2.png" alt="浏览器环境下事件循环运行机制" data-fancybox="gallery" />
 
 而在 Node.js 中，微任务会在事件循环的各个阶段之间执行，也就是一个阶段执行完毕，就会去执行微任务队列的任务。
 
-<img src="/assets/images/note/javascript/eventLoop/nodeEventLoop3.png" data-fancybox="gallery" />
+<img src="/assets/images/note/javascript/eventLoop/nodeEventLoop3.png" alt="Node环境下事件循环运行机制" data-fancybox="gallery" />
 
 
 
