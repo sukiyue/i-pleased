@@ -3,9 +3,9 @@ layout: home
 hero:
   name: I-Pleased
   text: Full into the moon.
-  image:
-    src: /logo.svg
-    alt: Logo
+  # image:
+  #   src: /logo.svg
+  #   alt: Logo
   # tagline: Dream wake up or Full into the moon.
   actions:
     - theme: brand
@@ -33,7 +33,7 @@ hero:
 <style lang="scss" scope>
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);   
 }
 
 .VPHome {
@@ -51,9 +51,9 @@ hero:
       rgba(30,30,30,0.3) 80%,
       rgba(40,40,40,0.6) 100%)
       ,url(/assets/images/bg.png); */
-  background-image: url(/assets/images/bg.png); 
+  background-image: url(/assets/images/bg-2.jpg); 
   background-size: cover;
-      background-attachment: fixed;
+  background-attachment: fixed;
 
   &::after {
     content: ' ';
@@ -73,7 +73,7 @@ hero:
       rgba(0,98,255, 0) 20%, 
       rgba(0,98,255, 0.2) 80%, 
       rgba(0,98,255, 0.8) 100%)
-      ,url(/assets/images/bg.png);
+      ,url(/assets/images/bg-2.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-blend-mode: none;
@@ -84,9 +84,9 @@ hero:
     animation-name: glitch-anim-1;
   }
 
-  /* p {
+  p {
     color: #fff;
-  } */
+  }
 }
 
 @keyframes glitch-anim-1 {
