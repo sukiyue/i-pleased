@@ -23,7 +23,7 @@ hero:
 #     details: Lorem ipsum...
 ---
 
-<SukanaWidget />
+<!-- <SukanaWidget /> -->
 <Sakura />
 
 <script>
@@ -149,10 +149,10 @@ hero:
   }
 }
 
-#sakana-widget {
+/* #sakana-widget {
   position: fixed;
   right: 0;
   bottom: 0;
   z-index: 101;
-}
+} */
 </style>
