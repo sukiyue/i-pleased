@@ -1,7 +1,6 @@
 /*
  * @Description: 顶部导航
  */
-
 import { DefaultTheme } from "vitepress";
 
 export const nav: DefaultTheme.Config['nav'] = [ 
@@ -20,6 +19,9 @@ export const nav: DefaultTheme.Config['nav'] = [
       },
       {
         text: 'Thymeleaf', link:'/note/thymeleaf/index'
+      },
+      {
+        text: '包管理工具', link:'/note/package-manage/npm-yarn-pnpm'
       }
     ]
   }

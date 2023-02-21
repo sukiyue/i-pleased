@@ -20,7 +20,7 @@
 
 可以通过 `Object.defineProperty()` 方法修改默认属性的特性。
 
-调用方法时，如果不指定特性的值，`configurable、enumerbale、writable` 特性将均默认为 false。同时也可以多次调用修改同一个属性的特性，但是把 `configurable` 特性设置为 false 之后就会有限制，后续更改为 ture 会抛出错误。
+调用方法时，如果不指定特性的值，`configurable、enumerable、writable` 特性将均默认为 false。同时也可以多次调用修改同一个属性的特性，但是把 `configurable` 特性设置为 false 之后就会有限制，后续更改为 ture 会抛出错误。
 
 :::
 
@@ -52,7 +52,7 @@ Object.defineProperty(obj, prop, descriptor)
 方法接收三个参数：
 - obj：需要定义属性的对象
 - prop：需要被定义或修改的属性名
-- descriptor：需要被定义或修改的属性的描述符，包含 configurable、enumerbale、writable 和 value 四个特性。
+- descriptor：需要被定义或修改的属性的描述符，包含 configurable、enumerable、writable 和 value 四个特性。
 
 **用法**
 

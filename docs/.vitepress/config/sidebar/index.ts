@@ -100,5 +100,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'BaseSyntax', link: '/note/thymeleaf/BaseSyntax' },
       ]
     }
+  ],
+  '/note/package-manage': [
+    {
+      text: '包管理工具',
+      collapsible: true,
+      items: [
+        { text: 'npm & yarn & pnpm', link: '/note/package-manage/npm-yarn-pnpm' }
+      ]
+    }
   ]
 }
