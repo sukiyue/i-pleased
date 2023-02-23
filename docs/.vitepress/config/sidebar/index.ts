@@ -88,6 +88,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Promise', link: '/note/ecmascript6/Promise' },
         { text: 'Module', link: '/note/ecmascript6/Module' },
         { text: 'Iterator', link: '/note/ecmascript6/Iterator' },
+        { text: 'Generator', link: '/note/ecmascript6/Generator' },
       ]
     },
   ],
