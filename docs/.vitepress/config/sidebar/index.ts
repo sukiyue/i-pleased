@@ -85,10 +85,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       items: [
         { text: '简介', link: '/note/ecmascript6/index' },
         { text: 'Proxy', link: '/note/ecmascript6/Proxy' },
-        { text: 'Promise', link: '/note/ecmascript6/Promise' },
-        { text: 'Module', link: '/note/ecmascript6/Module' },
+        { text: 'Promise 对象', link: '/note/ecmascript6/Promise' },
+        { text: 'Module 的语法', link: '/note/ecmascript6/Module' },
         { text: 'Iterator', link: '/note/ecmascript6/Iterator' },
-        { text: 'Generator', link: '/note/ecmascript6/Generator' },
+        { text: 'Generator 函数的语法', link: '/note/ecmascript6/Generator' },
+        { text: 'async 函数', link: '/note/ecmascript6/Async' },
       ]
     },
   ],

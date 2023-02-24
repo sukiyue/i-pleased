@@ -37,7 +37,7 @@ export const themeConfig: DefaultTheme.Config = {
   },
   
   docFooter: {
-    prev: 'Pagina prior',
-    next: 'Proxima pagina'
+    prev: 'Previous page',
+    next: 'Next Page'
   }
 }
