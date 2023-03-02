@@ -107,7 +107,7 @@ async function f() {
 
 ### 使用注意点
 
-`await` 命令后面的 `Promise` 对象的运行结果很可能是 `reject`，所以最好把 `await` 命令写在 `try...catch` 中。
+**`await` 命令后面的 `Promise` 对象的运行结果很可能是 `reject`，所以最好把 `await` 命令写在 `try...catch` 中。**
 
 ```js
 async function f() {
@@ -126,7 +126,7 @@ async function f() {
 }
 ```
 
-多个 `await` 命令后面的异步操作，如果不存在继发关系，最好让它们同时进行。
+**多个 `await` 命令后面的异步操作，如果不存在继发关系，最好让它们同时进行。**
 
 ```js
 let foo = await getFoo()
@@ -147,11 +147,11 @@ let bar = await barPromise
 
 ***
 
-`await` 命令只能用在 `async` 函数中，如果用在普通函数中，就会报错。
+**`await` 命令只能用在 `async` 函数中，如果用在普通函数中，就会报错。**
 
 *** 
 
-`async` 函数可以保留运行栈。
+**`async` 函数可以保留运行栈。**
 
 ```js
 const a = () => {
@@ -169,3 +169,63 @@ const a = async () => {
 }
 ```
 上面代码中，`b()` 运行的时候，`a()` 是暂停执行，上下文环境都保存着。一旦 `b()` 或 `c()` 报错，错误堆栈将包括 `a()`。
+
+## async 函数的实现原理
+
+`async` 函数的实现原理主要分为两部分：**`async` 函数内部的语法转换**和 **`Promise` 对象的包装**。
+
+1. `async` 函数内部的语法转换
+
+`async` 函数内部的语法转换可以看成是 `Generator` 函数的语法转化，将 `async` 函数转换成一个状态机。
+
+举一个简单的 `async` 函数的例子：
+
+```js
+async function fetchData() {
+  const result = await fetch('https://example.com/data')
+  const data = await result.json()
+  return data
+}
+```
+上面的函数可以转化成如下的代码：
+
+```js
+function fetchData() {
+  return spawn(function* () {
+    const result = yield fetch('https://example.com/data')
+    const data = yield result.json()
+    return data
+  })
+}
+
+function spawn(genFn) {
+  return new Promise(funtcion(resolve, reject) {
+    const gen = genFen()
+    function step(nextFn) {
+      let next
+      try {
+        next = nextFn()
+      } catch(e) {
+        return reject(e)
+      }
+      if (next.done) {
+        return resolve(next.value)
+      }
+      Promise.resolve(next.value).then(
+        function(v) {
+          return step(function() { return gen.next(v) })
+        },
+        function(e) {
+          return step(function() { return gen.throw(e) })
+        }
+      ) 
+    }
+    step(function() { return gen.next(undefined) })
+  })
+} 
+```
+在上面的代码中， `fetchData` 函数被转换成了一个普通函数，内部使用 `spawn` 函数生成了一个状态机，状态机的初始状态是通过调用 `genFn` 得到的 `Generator` 对象的 `next` 方法，每次执行 `yield` 表达式都会暂停状态机，并返回一个 `Promise` 对象。当 `Promise` 对象 `resolve` 时，状态机会继续执行下一条语句。
+
+2. `Promise` 对象的包装
+   
+`async` 函数返回的是一个 `Promise` 对象，所以还需要对函数的返回值进行包装。如果返回的是一个非 `Promise` 对象，那么会自动将返回值包装成一个 `Promise` 对象并 `resolve`；如果返回的是一个 `Promise` 对象，那么会直接返回这个 `Promise` 对象。
